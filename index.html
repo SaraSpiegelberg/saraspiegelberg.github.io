@@ -1,56 +1,186 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sara Spiegelberg | Em Breve</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: 'Inter', -apple-system, sans-serif; 
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
-            color: white; 
-            height: 100vh; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center;
-        }
-        .container { padding: 20px; }
-        .logo { font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px; color: #38bdf8; }
-        .status-badge { 
-            display: inline-block; 
-            background: rgba(56, 189, 248, 0.1); 
-            color: #38bdf8; 
-            padding: 5px 15px; 
-            border-radius: 20px; 
-            font-size: 0.8rem; 
-            font-weight: 600; 
-            text-transform: uppercase; 
-            margin-bottom: 20px;
-            border: 1px solid rgba(56, 189, 248, 0.3);
-        }
-        h1 { font-size: 1.5rem; margin-bottom: 15px; font-weight: 400; opacity: 0.9; }
-        p { font-size: 1rem; color: #94a3b8; max-width: 400px; margin: 0 auto 30px; line-height: 1.6; }
-        .loader {
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            border-top: 3px solid #38bdf8;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-    </style>
+    <title>Sara Spiegelberg | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@600;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <div class="status-badge">Sistema em Atualização</div>
-        <div class="logo">Sara Spiegelberg</div>
-        <h1>Meu novo portfólio de TI está chegando.</h1>
-        <p>Estou configurando os servidores e preparando o conteúdo. Em breve, meu currículo e projetos estarão disponíveis aqui.</p>
-        <div class="loader"></div>
+<body data-theme="pro">
+    <div class="mesh-bg">
+        <div class="mesh mesh-1"></div>
+        <div class="mesh mesh-2"></div>
     </div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="assets/logo.svg" alt="Sara Spiegelberg Logo" class="logo-svg">
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav-about">Sobre</a></li>
+                    <li><a href="#skills" data-i18n="nav-skills">Habilidades</a></li>
+                    <li><a href="#portfolio" data-i18n="nav-portfolio">Projetos</a></li>
+                </ul>
+                <div class="lang-switch" id="lang-toggle">
+                    <span class="lang-option active" data-lang="pt">PT</span>
+                    <span class="lang-divider">/</span>
+                    <span class="lang-option" data-lang="en">EN</span>
+                </div>
+                <div class="theme-toggle-new" id="theme-toggle">
+                    <span class="mode-label pro-label">PRO</span>
+                    <div class="switch-ui"><div class="switch-knob"></div></div>
+                    <span class="mode-label games-label">GAMES</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <p class="eyebrow reveal" data-i18n="hero-eyebrow">IT Specialist & Game Developer</p>
+                    <h1 class="reveal">
+                        <span class="theme-title pro-title" data-i18n="hero-pro">Engenharia de sistemas com <i>visão criativa</i>.</span>
+                        <span class="theme-title games-title" data-i18n="hero-games">Construindo mundos através do <i>código</i>.</span>
+                    </h1>
+                    <p class="hero-desc reveal" data-i18n="hero-desc">
+                        Eu sou a Sara. Ajudo empresas a escalar sua infraestrutura e transformo ideias criativas em jogos imersivos.
+                    </p>
+                    <div class="hero-actions reveal">
+                        <a href="#portfolio" class="btn btn-main" data-i18n="hero-btn-1">Explorar Projetos</a>
+                        <a href="#contact" class="btn btn-outline" data-i18n="hero-btn-2">Fale comigo</a>
+                    </div>
+                </div>
+                <div class="hero-image-container reveal">
+                    <img src="assets/sara_profile.png" alt="Sara Spiegelberg" class="hero-photo">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <div class="about-card glass reveal">
+                <div class="about-grid">
+                    <div class="about-bio">
+                        <h2 class="serif-title" data-i18n="about-title">Uma trajetória híbrida</h2>
+                        <p data-i18n="about-p">Minha carreira é marcada pela união de dois mundos: a robustez necessária para manter infraestruturas críticas e a abstração exigida no desenvolvimento de jogos. Essa dualidade me permite resolver problemas complexos com uma visão única e técnica.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-box">
+                            <span class="stat-num">05+</span>
+                            <span class="stat-label" data-i18n="stat-1">Anos de Experiência</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-num">20+</span>
+                            <span class="stat-label" data-i18n="stat-2">Projetos Entregues</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="container">
+            <div class="skills-section-layout reveal">
+                <div class="skills-head">
+                    <h2 class="serif-title" data-i18n="skills-title">Expertise</h2>
+                    <p data-i18n="skills-p">Dominando as ferramentas que moldam o futuro digital.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fas fa-server"></i>
+                        <h3 data-i18n="skill-1-t">Infraestrutura</h3>
+                        <p data-i18n="skill-1-p">Active Directory, Cloud Azure, Redes e Segurança.</p>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-code"></i>
+                        <h3 data-i18n="skill-2-t">Linguagens</h3>
+                        <p data-i18n="skill-2-p">Python, PHP, JavaScript, GDScript.</p>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-dragon"></i>
+                        <h3 data-i18n="skill-3-t">Jogos</h3>
+                        <p data-i18n="skill-3-p">Godot Engine, Arquitetura de Sistemas, UI/UX.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="container">
+            <h2 class="serif-title reveal" data-i18n="portfolio-title">Projetos em Destaque</h2>
+            
+            <div class="portfolio-grid pro-project reveal">
+                <div class="project-card-new glass">
+                    <div class="project-header">
+                        <span class="project-tag">Infra & Automação</span>
+                        <h3 data-i18n="pro-p1-t">IT Security Scanner</h3>
+                    </div>
+                    <p data-i18n="pro-p1-p">Sistema automatizado de varredura e auditoria de redes corporativas em tempo real.</p>
+                    <a href="#" class="project-link" data-i18n="proj-link">Ver Detalhes →</a>
+                </div>
+                <div class="project-card-new glass">
+                    <div class="project-header">
+                        <span class="project-tag">Cloud & DevOps</span>
+                        <h3 data-i18n="pro-p2-t">Azure Hub Auto-Deploy</h3>
+                    </div>
+                    <p data-i18n="pro-p2-p">Scripts de automação para provisionamento de infraestrutura escalável na nuvem.</p>
+                    <a href="#" class="project-link" data-i18n="proj-link">Ver Detalhes →</a>
+                </div>
+            </div>
+
+            <div class="portfolio-grid games-project reveal">
+                <div class="project-card-new glass game-embed-card">
+                    <iframe frameborder="0" src="https://itch.io/embed/4476398?border_width=5&amp;bg_color=000000" width="100%" height="167"><a href="https://saraspiegelberg.itch.io/planetandromeda">Planet Andromeda by Sara Spiegelberg, Yorllin</a></iframe>
+                </div>
+                <div class="project-card-new glass game-embed-card">
+                    <iframe frameborder="0" src="https://itch.io/embed/4456341?border_width=5" width="100%" height="167"><a href="https://saraspiegelberg.itch.io/journey-across-the-world">Journey Across The World by Sara Spiegelberg</a></iframe>
+                </div>
+                <div class="project-card-new glass game-embed-card">
+                    <iframe frameborder="0" src="https://itch.io/embed/2237689?border_width=5&amp;bg_color=000000&amp;fg_color=ff6262" width="100%" height="167"><a href="https://saraspiegelberg.itch.io/king-and-the-throne">King And The Throne by Sara Spiegelberg</a></iframe>
+                </div>
+                <div class="project-card-new glass game-embed-card">
+                    <iframe frameborder="0" src="https://itch.io/embed/4521086?border_width=5" width="100%" height="167"><a href="https://saraspiegelberg.itch.io/star-man">Star Man by Sara Spiegelberg</a></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <div class="contact-section glass reveal">
+                <h2 class="serif-title" data-i18n="contact-title">Vamos construir o amanhã?</h2>
+                <p data-i18n="contact-p" style="margin-bottom: 2rem;">Estou aberta a novas parcerias e desafios técnicos.</p>
+                
+                <form id="contact-form" action="https://formspree.io/f/maqvqoew" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Seu Nome" data-i18n-placeholder="form-name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="_replyto" placeholder="Seu E-mail" data-i18n-placeholder="form-email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Sua Mensagem" data-i18n-placeholder="form-msg" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-main" data-i18n="form-submit">Enviar Mensagem</button>
+                </form>
+
+                <div class="social-links-new">
+                    <a href="https://www.linkedin.com/in/sara-bernicker-spiegelberg-2489941b5/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/SaraSpiegelberg" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="footer-text">&copy; 2026 Sara Spiegelberg. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
