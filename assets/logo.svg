@@ -1,9 +1,9 @@
 <svg width="180" height="80" viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Monograma SS -->
-  <text x="5" y="45" font-family="'Outfit', sans-serif" font-size="50" font-weight="700" fill="#ffffff">S</text>
-  <text x="25" y="70" font-family="'Outfit', sans-serif" font-size="50" font-weight="700" fill="#ffffff">S</text>
+  <text x="5" y="45" font-family="'Outfit', sans-serif" font-size="50" font-weight="700" fill="currentColor">S</text>
+  <text x="25" y="70" font-family="'Outfit', sans-serif" font-size="50" font-weight="700" fill="currentColor">S</text>
   
   <!-- Nomes -->
-  <text x="38" y="40" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#ffffff">ara</text>
-  <text x="60" y="65" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="#ffffff">piegelberg</text>
+  <text x="38" y="40" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="currentColor">ara</text>
+  <text x="60" y="65" font-family="'Inter', sans-serif" font-size="24" font-weight="400" fill="currentColor">piegelberg</text>
 </svg>

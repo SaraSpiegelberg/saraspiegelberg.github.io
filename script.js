@@ -75,6 +75,7 @@ const translations = {
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
+    body.classList.add('js-loaded');
     const themeToggle = document.getElementById('theme-toggle');
     const langToggle = document.getElementById('lang-toggle');
     const langOptions = document.querySelectorAll('.lang-option');
